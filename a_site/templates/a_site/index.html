@@ -1,0 +1,12 @@
+<h1>Anomymous Site</h1>
+
+<h2>Insert a Wish</h2>
+	
+<form action="{% url 'a_site:validate' %}" method="post">
+{% csrf_token %}
+
+	<input type="text" name="wish"><br><br>
+	<input type="submit" value="submit">
+</form>
+<h2>Wishes</h2>
+

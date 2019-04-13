@@ -1,0 +1,41 @@
+body {
+background-image:url("bg.jpg");	
+ background-attachment: fixed;
+  nd-position: center; 
+
+
+}
+
+#logo{
+	font-family:'Carter One'; 'Andika';
+	font-size:20px;
+}
+
+#f-heading{
+	font-family: 'Caesar Dressing';
+	font-size:100px;
+	margin-top:40px;
+}
+
+
+#scroll{
+	background-color:#0000004d;
+	color:black;
+	border:blue;	
+	padding:10px;
+}
+
+.w-box{
+	margin:10px;
+	padding:10px;
+	word-break:break-all;
+	background-color: #1731db4d;
+	color:blue;
+
+	
+}
+
+.input-c{
+	margin:10px
+
+}
