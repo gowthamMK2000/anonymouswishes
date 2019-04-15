@@ -131,6 +131,7 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 #STATIC_TMP = os.path.join(BASE_DIR, 'static')
 
 MIDDLEWARE_CLASSES = [
+'django.middleware.security.SecurityMiddleware',
 'whitenoise.middleware.WhiteNoiseMiddleware',
 ]
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
@@ -139,5 +140,6 @@ STATIC_URL = '/static/'
 STATICFILES_DIRS = (
     os.path.join(BASE_DIR, 'static'),
 )
+STATICFILES_STORAGE='whitenoise.django.GzipManifestStaticFilesStorage'
 django_heroku.settings(locals())
 

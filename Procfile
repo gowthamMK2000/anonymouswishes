@@ -1,1 +1,1 @@
-web: gunicorn anonymouswishes.wsgi:application --preload --workers 1
+web: gunicorn anonymouswishes.wsgi --log-file -
