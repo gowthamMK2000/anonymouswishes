@@ -1,1 +1,1 @@
-web: gunicorn anonymouswishes.wsgi --log-file -
+web: gunicorn anonymoussite.wsgi --log-file -
