@@ -139,7 +139,7 @@ MIDDLEWARE_CLASSES = [
 'django.middleware.security.SecurityMiddleware',
 'whitenoise.middleware.WhiteNoiseMiddleware',
 ]
-#STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
+STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
 #os.makedirs(STATIC_TMP, exist_ok=True)
 STATICFILES_DIRS = (
