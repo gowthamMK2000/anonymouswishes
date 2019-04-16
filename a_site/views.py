@@ -16,7 +16,7 @@ def insert(request):
 	return render(request,'a_site/insert.html')
 
 def wishes(request):
-	w = Wishes.objects.all()
+	w = Wishes.objects.all().order_by('idate').reverse()
 	return render(request,'a_site/wishes.html',{'wishes':w})
 
 def validate(request):
