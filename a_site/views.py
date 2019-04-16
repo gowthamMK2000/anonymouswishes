@@ -24,7 +24,7 @@ def validate(request):
 	n = request.POST['wname'] 
 	new = Wishes(name=n, w_text = w,idate=timezone.now())
 	new.save()
-	return HttpResponseRedirect(reverse('a_site:index'))
+	return HttpResponseRedirect(reverse('a_site:wishes'))
 
 
 

@@ -133,7 +133,7 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 #STATIC_TMP = os.path.join(BASE_DIR, 'static')
 
 MIDDLEWARE_CLASSES = [
-'django.middleware.security.SecurityMiddleware',
+#'django.middleware.security.SecurityMiddleware',
 'whitenoise.middleware.WhiteNoiseMiddleware',
 ]
 #STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
