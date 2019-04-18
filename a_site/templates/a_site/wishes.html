@@ -4,52 +4,8 @@
 	<title>all your wishes</title>
 	<meta charset="utf-8">	
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<style>
-	body {
- background-attachment: fixed;
-  nd-position: center; 
-
-
-}
-.b-primary {
-    background-color:#5937c980;
-}
-#logo{
-	font-family:'Carter One'; 'Andika';
-	font-size:20px;
-}
-
-#f-heading{
-	font-family: 'Caesar Dressing';
-	font-size:100px;
-	margin-top:40px;
-}
-
-
-#scroll{
-	background-color:#0000004d;
-	border:blue;	
-	padding:10px;
-}
-
-#name{
-	color:black;
-}
-.w-box{
-	margin:10px;
-	padding:10px;
-	word-break:break-all;
-	background-color: #1731db4d;
-	color:#e1f242;
-
-	
-}
-
-.input-c{
-	margin:10px
-
-}
-	</style>
+	{% load static %}
+	<link rel="stylesheet" type="text/css" href="{% static 'css/main.css'  %}">
 	<link href='https://fonts.googleapis.com/css?family=Carter One' rel='stylesheet'>
 	<link href='https://fonts.googleapis.com/css?family=Caesar Dressing' rel='stylesheet'>	
 	<meta name="viewport" content="width=device-width, initial-scale=1">
@@ -65,20 +21,20 @@
   <div class="collapse navbar-collapse" id="navbarNav">
     <ul class="navbar-nav">
       <li class="nav-item active">
-        <a class="nav-link" href="{% url 'a_site:index'%}">Home </a>
+        <a class="nav-link" href="{% url 'a_site:index' uname %}">Home </a>
       </li>
       <li class="nav-item active">
-        <a class="nav-link" href="{% url 'a_site:insert'%}">wish Afridy </a>
+        <a class="nav-link" href="{% url 'a_site:insert' uname  %}">wish Afridy </a>
       </li>
       <li class="nav-item active">
-        <a class="nav-link" href="{% url 'a_site:wishes'%}">wishes <span class="sr-only">(current)</span></a>
+        <a class="nav-link" href="{% url 'a_site:wishes' uname %}">wishes <span class="sr-only">(current)</span></a>
       </li>
 
     </ul>
   </div>
 </nav>
 	<div id="f-heading" class="text-center">
-		GSAH
+		{{uname}}
 	</div>
 	
 

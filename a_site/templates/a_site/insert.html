@@ -5,58 +5,15 @@
 	<meta charset="utf-8">	
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	{% load static %}
-	<style>
-	body {
+	<link rel="stylesheet" type="text/css" href="{% static 'css/main.css'  %}">
 
- background-attachment: fixed;
-  nd-position: center; 
-
-
-}
-.b-primary {
-    background-color:#5937c980;
-}
-#logo{
-	font-family:'Carter One'; 'Andika';
-	font-size:20px;
-}
-
-#f-heading{
-	font-family: 'Caesar Dressing';
-	font-size:100px;
-	margin-top:40px;
-}
-
-
-#scroll{
-	background-color:#0000004d;
-	color:black;
-	border:blue;	
-	padding:10px;
-}
-
-.w-box{
-	margin:10px;
-	padding:10px;
-	word-break:break-all;
-	background-color: #1731db4d;
-	color:blue;
-
-	
-}
-
-.input-c{
-	margin:10px
-
-}
-	</style>
 	<link href='https://fonts.googleapis.com/css?family=Carter One' rel='stylesheet'>
 	<link href='https://fonts.googleapis.com/css?family=Caesar Dressing' rel='stylesheet'>	
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 </head>
 
-<body class="b-primary">
+<body >
 	<nav id="navbar-example2" class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
   <a id="logo" class="navbar-brand" href="#">ANOMYMOUS WISHES</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -65,22 +22,22 @@
   <div class="collapse navbar-collapse" id="navbarNav">
     <ul class="navbar-nav">
 <li class="nav-item active">
-        <a class="nav-link" href="{% url 'a_site:index'%}">Home </a>
+        <a class="nav-link" href="{% url 'a_site:index' uname %}">Home </a>
       </li>
       <li class="nav-item active">
-        <a class="nav-link" href="{% url 'a_site:insert'%}">wish Afridy <span class="sr-only">(current)</span></a>
+        <a class="nav-link" href="{% url 'a_site:insert' uname %}">wish Afridy <span class="sr-only">(current)</span></a>
       </li>
       <li class="nav-item active">
-        <a class="nav-link" href="{% url 'a_site:wishes'%}">wishes </a>
+        <a class="nav-link" href="{% url 'a_site:wishes' uname %}">wishes </a>
       </li>
     </ul>
   </div>
 </nav>
 	<div id="f-heading" class="text-center">
-		GSAH
+		{{uname}}
 	</div>
 	
-	<form action="{% url 'a_site:validate' %}" method="post">
+	<form action="{% url 'a_site:validate' uname %}" method="post">
 	{% csrf_token %}
 	  <div class="form-group container">
 	  <div class="input-c">

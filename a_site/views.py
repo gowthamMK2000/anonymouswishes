@@ -9,22 +9,22 @@ from .models import Wishes
 
 from django.utils import timezone
 
-def index(request):
-	return render(request,'a_site/index1.html')
+def index(request,uname):
+	return render(request,'a_site/index1.html',{'uname':uname})
 
-def insert(request):
-	return render(request,'a_site/insert.html')
+def insert(request,uname):
+	return render(request,'a_site/insert.html',{'uname':uname})
 
-def wishes(request):
+def wishes(request,uname):
 	w = Wishes.objects.all().order_by('idate').reverse()
-	return render(request,'a_site/wishes.html',{'wishes':w})
+	return render(request,'a_site/wishes.html',{'wishes':w,'uname':uname})
 
-def validate(request):
+def validate(request,uname):
 	w = request.POST['wish']
 	n = request.POST['wname'] 
 	new = Wishes(name=n, w_text = w,idate=timezone.now())
 	new.save()
-	return HttpResponseRedirect(reverse('a_site:wishes'))
+	return HttpResponseRedirect(reverse('a_site:wishes',args=[uname]))
 
 
 
