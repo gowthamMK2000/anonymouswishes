@@ -10,6 +10,11 @@ from .models import Wishes
 from django.utils import timezone
 
 def index(request,uname):
+	if uname=="jn":
+		uname="pannikutty";
+	if uname=="jr":
+		uname="punnakutty";
+		
 	return render(request,'a_site/index1.html',{'uname':uname})
 
 def insert(request,uname):
