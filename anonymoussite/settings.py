@@ -86,28 +86,37 @@ TEMPLATES = [
 WSGI_APPLICATION = 'anonymoussite.wsgi.application'
 
 
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+    }
+}
+
 # Database
 # https://docs.djangoproject.com/en/2.1/ref/settings/#databases
 
-DATABASES = {
+"""DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'a_site',
-	'USER': 'mk',
-	'PASSWORD': 'mk',
-	'HOST': '',
+        'NAME': 'd9582dctu8bc91',
+	'USER': 'rzmxyshrenjkpv',
+	'PASSWORD': '1ef59daee8c2d88480bd2c165f9334d0d97ab5da47ed3439799b7de84acd0e91',
+	'HOST': 'ec2-54-225-242-183.compute-1.amazonaws.com',
 	'PORT': '5432'
     }
 }
 
+
 db_from_env = dj_database_url.config()
 DATABASES['default'].update(db_from_env)
 
-#DATABASES = {
- #     'default': dj_database_url.config(
-  #        default='sqlite:////{0}'.format(os.path.join(BASE_DIR, 'db.sqlite3'))
-      #)
-#  }
+DATABASES = {
+
+      'default': dj_database_url.config(
+          default='sqlite:////{0}'.format(os.path.join(BASE_DIR, 'db.sqlite3'))
+      )
+  }
 
  
 
@@ -126,7 +135,7 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
-
+"""
 # Internationalization
 # https://docs.djangoproject.com/en/2.1/topics/i18n/
 
