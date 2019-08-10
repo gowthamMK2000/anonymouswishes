@@ -21,5 +21,5 @@ admin.autodiscover()
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('mk/<slug:uname>/',include('a_site.urls')),
+    path('77107/<slug:uname>/',include('a_site.urls')),
 ]
