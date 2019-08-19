@@ -25,7 +25,7 @@
         <a class="nav-link" href="{% url 'a_site:index' uname %}">Home </a>
       </li>
       <li class="nav-item active">
-        <a class="nav-link" href="{% url 'a_site:insert' uname %}">wish Afridy <span class="sr-only">(current)</span></a>
+        <a class="nav-link" href="{% url 'a_site:insert' uname %}">Wish Jaya <span class="sr-only">(current)</span></a>
       </li>
       <li class="nav-item active">
         <a class="nav-link" href="{% url 'a_site:wishes' uname %}">wishes </a>
@@ -34,28 +34,28 @@
   </div>
 </nav>
 	<div id="f-heading" class="text-center">
-		{{uname}}
+		Spidey
 	</div>
 	
 	<form action="{% url 'a_site:validate' uname %}" method="post">
 	{% csrf_token %}
 	  <div class="form-group container">
 	  <div class="input-c">
-	    <span class="input-group-text ">Make a wish</span>
+	    <span class="input-group-text ">your wishes</span>
 	  
-	  <textarea type="text" class="form-control" aria-label="With textarea" name="wish" maxlength="1000" placeholder="send your wishes to  afridy"></textarea>
+	  <textarea type="text" class="form-control" aria-label="With textarea" name="wish" maxlength="1000" placeholder="send your wishes to  jaya"></textarea>
 	</div>
 	<div class="input-c">
-	    <span class="input-group-text ">let afridy know your name</span>
+	    <span class="input-group-text ">wishes from</span>
 	  
 	  <input type="text" class="form-control" aria-label="With textarea" name="wname" value="anonymous" maxlength="50"></input>
 	</div>
-	<button type="submit" class="btn btn-default btn-primary input-c">Submit</button>
+	<button type="submit" class="btn btn-default btn-primary input-b">Submit</button>
 	</div>
 	</form>
 
-	<div class="container-fluid text-center fixed-bottom">
-		&copy mk 2019-2021
+	<div class="container-fluid text-center fixed-bottom foot">
+		Onion 2019-2021
 	</div>
 	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>

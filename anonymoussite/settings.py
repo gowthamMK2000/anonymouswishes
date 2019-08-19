@@ -28,10 +28,13 @@ os.environ.setdefault("DJANGO_SETTINGS_MODULE", "project.settings.dev")
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = 'lpg3)o==gbkc=_j_go+i@^@ajb2$wi^%&k$qj^9v2*&jn6yu%6'
 
+#ALLOWED_HOSTS = []
+
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
+#TEMPLATE_DEBUG = False
 
-ALLOWED_HOSTS = ['*']
+
 
 
 # Application definition
@@ -86,17 +89,17 @@ TEMPLATES = [
 WSGI_APPLICATION = 'anonymoussite.wsgi.application'
 
 
-DATABASES = {
+""""DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
         'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
     }
 }
-
+"""
 # Database
 # https://docs.djangoproject.com/en/2.1/ref/settings/#databases
 
-"""DATABASES = {
+DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
         'NAME': 'd9582dctu8bc91',
@@ -111,13 +114,13 @@ DATABASES = {
 db_from_env = dj_database_url.config()
 DATABASES['default'].update(db_from_env)
 
-DATABASES = {
+"""DATABASES = {
 
       'default': dj_database_url.config(
           default='sqlite:////{0}'.format(os.path.join(BASE_DIR, 'db.sqlite3'))
       )
   }
-
+"""
  
 
 AUTH_PASSWORD_VALIDATORS = [
@@ -135,7 +138,7 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
-"""
+
 # Internationalization
 # https://docs.djangoproject.com/en/2.1/topics/i18n/
 
@@ -155,7 +158,7 @@ USE_TZ = True
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 #STATIC_TMP = os.path.join(BASE_DIR, 'static')
 STATIC_URL = '/static/'
-STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
+#STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
 #os.makedirs(STATIC_TMP, exist_ok=True)
 STATICFILES_DIRS = (

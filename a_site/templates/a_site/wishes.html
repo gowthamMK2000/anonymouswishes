@@ -24,33 +24,34 @@
         <a class="nav-link" href="{% url 'a_site:index' uname %}">Home </a>
       </li>
       <li class="nav-item active">
-        <a class="nav-link" href="{% url 'a_site:insert' uname  %}">wish Afridy </a>
+        <a class="nav-link" href="{% url 'a_site:insert' uname  %}">Wish Jaya </a>
       </li>
       <li class="nav-item active">
-        <a class="nav-link" href="{% url 'a_site:wishes' uname %}">wishes <span class="sr-only">(current)</span></a>
+        <a class="nav-link" href="{% url 'a_site:wishes' uname %}">Wishes <span class="sr-only">(current)</span></a>
       </li>
 
     </ul>
   </div>
 </nav>
 	<div id="f-heading" class="text-center">
-		{{uname}}
+		Wishes
 	</div>
 	
 
-	<div class="container primary">
+	<!--<div class="container primary">
 		<h1>Wishes</h1>
 		
 	</div>
+	--->
 	<div id="scroll" class="container rouned">
 		{% for  w in wishes.all %}
 		<div class="w-box rounded">
-		<h3 >{{w.w_text}}</h3><h5 id="name">---{{w.name}}</h5>
+		<h3 >{{w.w_text}}</h3><h5 id="name">by <span id="wisher">{{w.name}}</span></h5>
 		</div>
 		{% endfor %}
 	</div>
-	<div class="container-fluid text-center fixed-botom">
-		&copy mk 2019-2021
+	<div class="container-fluid text-center fixed-bottom foot">
+		Onion 2019-2021
 	</div>
 	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
