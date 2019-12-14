@@ -31,7 +31,8 @@ SECRET_KEY = 'lpg3)o==gbkc=_j_go+i@^@ajb2$wi^%&k$qj^9v2*&jn6yu%6'
 #ALLOWED_HOSTS = []
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+#change to True
+DEBUG = False
 #TEMPLATE_DEBUG = False
 
 
