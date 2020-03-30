@@ -32,7 +32,7 @@ SECRET_KEY = 'lpg3)o==gbkc=_j_go+i@^@ajb2$wi^%&k$qj^9v2*&jn6yu%6'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 #change to True
-DEBUG = False
+DEBUG = True
 #TEMPLATE_DEBUG = False
 
 
