@@ -10,10 +10,7 @@ from .models import Wishes
 from django.utils import timezone
 
 def index(request,uname):
-	if uname=="jn":
-		uname="pannikutty";
-	if uname=="jr":
-		uname="punnakutty";
+	uname="Afridy"
 		
 	return render(request,'a_site/index1.html',{'uname':uname})
 
@@ -25,9 +22,9 @@ def wishes(request,uname):
 	return render(request,'a_site/wishes.html',{'wishes':w,'uname':uname})
 
 def validate(request,uname):
-	w = request.POST['wish']
-	n = request.POST['wname'] 
-	new = Wishes(name=n, w_text = w,idate=timezone.now())
+	wish = request.POST['wish']
+	name = request.POST['wname'] 
+	new = Wishes(name=name, w_text = wish,idate=timezone.now())
 	new.save()
 	return HttpResponseRedirect(reverse('a_site:wishes',args=[uname]))
 

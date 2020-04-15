@@ -3,42 +3,35 @@
   src: url(font/goodtimes.ttf);
 }
 @font-face{
-  font-family: farfromhome;
-  src: url(font/FarFromHomecoming.otf);
-}
-@font-face{
-  font-family: amazing;
-  src: url(font/TheAmazingSpiderMan.ttf);
-}
-@font-face{
-  font-family: mighty;
-  src: url(font/mightyspidey.ttf);
-}
+	font-family: happybirthday;
+	src: url(font/happyBirthday.ttf);
+  }
+
 @media screen and (min-width: 601px) {
   #f-heading{
-    font-size: 40px;
+    font-size: 120px;
   }
   #hbd{
-  	font-size: 50px;
+  	font-size: 90px;
   }
 
 }
 
 @media screen and (max-width: 600px) {
   #f-heading{
-    font-size:25px;
+    font-size:58px;
   }
   #hbd{
-  	font-size:55px;
+  	font-size:70px;
   }
 
 }
 
 body {
- background-image:url("sp.jpg") ;	
+ background: rgb(2,0,36);
+ background: linear-gradient(248deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 38%, rgba(0,212,255,1) 100%); 
  background-attachment: fixed;
  background-size: cover;
- ackground-origin: content-box;
  background-size: 105% 100%;
  background-position: center;
 
@@ -52,7 +45,7 @@ body {
 }
 
 #f-heading{
-	font-family: 'mighty';
+	font-family: 'happybirthday';
 	fot-size: 5vw;
 	margin-top:60px;
 	padding-top: 40px;
@@ -92,7 +85,7 @@ body {
 }
 
 #hbd{
-		font-family:'farfromhome';
+		font-family:'goodtimes';
 		font-size: vw;	
 		margin-top:30px;
 		text-transform:uppercase;
