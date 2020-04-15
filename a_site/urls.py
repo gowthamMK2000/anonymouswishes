@@ -10,4 +10,5 @@ urlpatterns=[
 	path('validate/',views.validate,name='validate'),
 	path('insert/',views.insert,name='insert'),
 	path('wishes/',views.wishes,name='wishes'),
+	
 ] + static(settings.STATIC_URL,decument_root=settings.STATIC_ROOT)

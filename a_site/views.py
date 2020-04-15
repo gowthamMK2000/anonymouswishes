@@ -28,5 +28,7 @@ def validate(request,uname):
 	new.save()
 	return HttpResponseRedirect(reverse('a_site:wishes',args=[uname]))
 
+def question(request,uname):
+	return render(request,'a_site/question.html',{'uname':uname})
 
 

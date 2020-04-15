@@ -18,7 +18,7 @@
 	<div id="scroll" class="container rouned">
 		{% for  w in wishes.all %}
 		<div class="w-box rounded">
-		<h3 >{{w.w_text}}</h3><h5 id="name">by <span id="wisher">{{w.name}}</span></h5>
+		<h3 class="wish-text">{{w.w_text}}</h3><h5 id="name">by <span id="wisher">{{w.name}}</span></h5>
 		</div>
 		{% endfor %}
 	</div>

@@ -9,7 +9,7 @@
 @font-face{
 	font-family: lato;
 	src: url(font/Lato-BoldItalic.ttf);
-  }
+}
 
 @media screen and (min-width: 601px) {
   #f-heading{
@@ -38,8 +38,6 @@ body {
  background-size: cover;
  background-size: 105% 100%;
  background-position: center;
-
-
  
 }
 
@@ -86,7 +84,7 @@ body {
 	font-size: 10px;
 	margin:20px;
 	padding:15px;
-	word-break:break-all;
+
 	background-color: #c874744d;
 	color:#e6d57d;
 	
@@ -94,6 +92,8 @@ body {
 
 	
 }
+	
+
 
 #wisher{
 	padding-right: 2px;
@@ -124,14 +124,15 @@ body {
 .btn-primary{
 	background-color: #184986;
 }
-.foot{
-	
-	position: fixed;
+
+
+#footer{	
+	background-color: #19296c;
 }
 
 
 #navbar-example2{
-	background-color:#009dff6e !important;
+	background-color:#009dffb7 !important;
 	
 }
 
@@ -146,8 +147,7 @@ body {
 	margin-left: 10px;
 	margin: 5px;
 	border-radius: 5px;
-
-
+	
 }
 
 
@@ -163,3 +163,7 @@ body {
 	
 }
 
+.wish-text{
+	text-align: justify;
+	text-justify: inter-word;
+}
